@@ -1,17 +1,19 @@
 package sreejith.customer;
 
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import sreejith.exception.DuplicateResourceException;
+import sreejith.exception.RequestValidationException;
+import sreejith.exception.ResourceNotFound;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CustomerService {
 
     private final CustomerDao customerDao;
 
-    public CustomerService(CustomerDao customerDao) {
+    public CustomerService(@Qualifier("jpa") CustomerDao customerDao) {
         this.customerDao = customerDao;
     }
 
@@ -21,6 +23,51 @@ public class CustomerService {
 
     public Customer getCustomer(int id) {
         return customerDao.findCustomerByID(id)
-                .orElseThrow(() -> new IllegalArgumentException("Error"));
+                .orElseThrow(() -> new ResourceNotFound("Customer with id: %s not found.".formatted(id)));
+    }
+
+    void addCustomer(AddCustomerDto addCustomerDto) {
+        if (customerDao.isExistingUser(addCustomerDto.email())) {
+            throw new DuplicateResourceException("email already in use.");
+        }
+        customerDao.insertCustomer(new Customer(addCustomerDto.name(),
+                addCustomerDto.email(),
+                addCustomerDto.age()));
+    }
+
+    void deleteCustomer(Integer id) {
+        customerDao.findCustomerByID(id).orElseThrow(() -> new ResourceNotFound("Customer with id: %s not found.".formatted(id)));
+        customerDao.deleteCustomer(id);
+    }
+
+    void updateCustomer(UpdateCustomerDto updateCustomerDto, Integer id) {
+        Customer customer = customerDao.findCustomerByID(id).orElseThrow(
+                () -> new ResourceNotFound("Customer with id: %s not found.".formatted(id)));
+        boolean changes = false;
+        if(!customer.getName().equals(updateCustomerDto.name())) {
+            customer.setName(updateCustomerDto.name());
+            changes = true;
+
+        }
+        if(!customer.getName().equals(updateCustomerDto.name())) {
+            customer.setEmail(updateCustomerDto.email());
+            changes = true;
+
+        }
+        if(!customer.getName().equals(updateCustomerDto.name())) {
+            if (customerDao.isExistingUser(updateCustomerDto.email())) {
+                throw new DuplicateResourceException("email already in use.");
+
+            }
+            customer.setAge(updateCustomerDto.age());
+            changes = true;
+
+
+        }
+        if(!changes) {
+            throw new RequestValidationException("No Changes Found");
+        }
+        customerDao.updateCustomer(customer);
+
     }
 }

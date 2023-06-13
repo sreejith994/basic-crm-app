@@ -1,8 +1,12 @@
 package sreejith;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+import sreejith.customer.Customer;
+import sreejith.customer.CustomerRepository;
 
 import java.util.Arrays;
 
@@ -12,12 +16,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(Main.class, args);
+        SpringApplication.run(Main.class, args);
 
-        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
-        Arrays.stream(beanDefinitionNames)
-                .forEach(System.out::println);
+
     }
 
+    @Bean
+    CommandLineRunner commandLineRunner(CustomerRepository customerRepository) {
+        return args -> {
+            Customer john = new Customer("John","john.smith@amz.com",34);
+            Customer alex = new Customer("alex","alex.smith@amz.com",37);
+
+            customerRepository.save(john);
+            customerRepository.save(alex);
+
+        };
+    }
 
 }
