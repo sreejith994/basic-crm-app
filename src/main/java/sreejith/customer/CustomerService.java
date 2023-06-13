@@ -21,7 +21,7 @@ public class CustomerService {
         return customerDao.selectAllCustomers();
     }
 
-    public Customer getCustomer(int id) {
+    public Customer getCustomer(Long id) {
         return customerDao.findCustomerByID(id)
                 .orElseThrow(() -> new ResourceNotFound("Customer with id: %s not found.".formatted(id)));
     }
@@ -35,12 +35,12 @@ public class CustomerService {
                 addCustomerDto.age()));
     }
 
-    void deleteCustomer(Integer id) {
+    void deleteCustomer(Long id) {
         customerDao.findCustomerByID(id).orElseThrow(() -> new ResourceNotFound("Customer with id: %s not found.".formatted(id)));
         customerDao.deleteCustomer(id);
     }
 
-    void updateCustomer(UpdateCustomerDto updateCustomerDto, Integer id) {
+    void updateCustomer(UpdateCustomerDto updateCustomerDto, Long id) {
         Customer customer = customerDao.findCustomerByID(id).orElseThrow(
                 () -> new ResourceNotFound("Customer with id: %s not found.".formatted(id)));
         boolean changes = false;

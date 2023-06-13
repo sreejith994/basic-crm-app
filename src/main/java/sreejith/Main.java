@@ -1,5 +1,6 @@
 package sreejith;
 
+import com.github.javafaker.Faker;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,6 +10,7 @@ import sreejith.customer.Customer;
 import sreejith.customer.CustomerRepository;
 
 import java.util.Arrays;
+import java.util.Random;
 
 @SpringBootApplication
 public class Main {
@@ -24,11 +26,14 @@ public class Main {
     @Bean
     CommandLineRunner commandLineRunner(CustomerRepository customerRepository) {
         return args -> {
-            Customer john = new Customer("John","john.smith@amz.com",34);
-            Customer alex = new Customer("alex","alex.smith@amz.com",37);
+            Faker faker = new Faker();
+            var name = faker.name();
+            Random rand = new Random();
+            Customer customer = new Customer(name.fullName(),
+                    faker.internet().safeEmailAddress(),
+                    rand.nextInt(16,99));
 
-            customerRepository.save(john);
-            customerRepository.save(alex);
+            customerRepository.save(customer);
 
         };
     }
