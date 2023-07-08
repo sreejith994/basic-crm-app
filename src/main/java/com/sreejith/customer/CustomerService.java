@@ -1,10 +1,10 @@
-package sreejith.customer;
+package com.sreejith.customer;
 
+import com.sreejith.exception.RequestValidationException;
+import com.sreejith.exception.ResourceNotFound;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import sreejith.exception.DuplicateResourceException;
-import sreejith.exception.RequestValidationException;
-import sreejith.exception.ResourceNotFound;
+import com.sreejith.exception.DuplicateResourceException;
 
 import java.util.List;
 
@@ -49,17 +49,17 @@ public class CustomerService {
             changes = true;
 
         }
-        if(!customer.getName().equals(updateCustomerDto.name())) {
-            customer.setEmail(updateCustomerDto.email());
+        if(!(customer.getAge() ==updateCustomerDto.age())) {
+            customer.setAge(updateCustomerDto.age());
             changes = true;
 
         }
-        if(!customer.getName().equals(updateCustomerDto.name())) {
+        if(!customer.getEmail().equals(updateCustomerDto.email())) {
             if (customerDao.isExistingUser(updateCustomerDto.email())) {
                 throw new DuplicateResourceException("email already in use.");
 
             }
-            customer.setAge(updateCustomerDto.age());
+            customer.setEmail(updateCustomerDto.email());
             changes = true;
 
 

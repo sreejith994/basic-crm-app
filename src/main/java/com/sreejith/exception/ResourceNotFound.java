@@ -1,4 +1,4 @@
-package sreejith.exception;
+package com.sreejith.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

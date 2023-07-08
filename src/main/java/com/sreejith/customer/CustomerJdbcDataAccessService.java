@@ -1,4 +1,4 @@
-package sreejith.customer;
+package com.sreejith.customer;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -70,12 +70,12 @@ public class CustomerJdbcDataAccessService implements CustomerDao {
     @Override
     public void deleteCustomer(Long id) {
         var sql = """
-                DELETE 
-                FROM customer
-                WHERE id = ?
+                    DELETE
+                    FROM customer
+                    WHERE id = ?
                 """;
 
-        jdbcTemplate.query(sql, customerRowMapper, id);
+        jdbcTemplate.update(sql, id);
 
     }
 

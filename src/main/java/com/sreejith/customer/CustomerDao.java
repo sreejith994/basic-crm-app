@@ -1,4 +1,4 @@
-package sreejith.customer;
+package com.sreejith.customer;
 
 import java.util.List;
 import java.util.Optional;

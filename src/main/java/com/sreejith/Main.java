@@ -1,15 +1,13 @@
-package sreejith;
+package com.sreejith;
 
 import com.github.javafaker.Faker;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
-import sreejith.customer.Customer;
-import sreejith.customer.CustomerRepository;
+import com.sreejith.customer.Customer;
+import com.sreejith.customer.CustomerRepository;
 
-import java.util.Arrays;
 import java.util.Random;
 
 @SpringBootApplication

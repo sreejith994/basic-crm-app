@@ -1,4 +1,4 @@
-package sreejith.customer;
+package com.sreejith.customer;
 
 import org.springframework.stereotype.Repository;
 

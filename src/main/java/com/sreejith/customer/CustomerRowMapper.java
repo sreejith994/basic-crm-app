@@ -1,9 +1,8 @@
-package sreejith.customer;
+package com.sreejith.customer;
 
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
-import javax.swing.tree.TreePath;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
