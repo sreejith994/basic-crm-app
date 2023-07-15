@@ -16,7 +16,7 @@ services:
 
   amigoscode-api:
     container_name: amigoscode-api
-    image: amigoscode/amigoscode-api
+    image: mastersreejith/spring-boot-example
     environment:
       SPRING_DATASOURCE_URL: "jdbc:postgresql://db:5432/customer"
     ports:
@@ -26,7 +26,6 @@ services:
     depends_on:
       - db
     restart: unless-stopped
-
 
   pgadmin:
     container_name: pgadmin
