@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d9a8cb77-6556-460f-9ec4-527fc30696f9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerrun.aws.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/customer/AddCustomerDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/customer/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/customer/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/customer/CustomerDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/customer/CustomerJdbcDataAccessService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/customer/CustomerJpaDataAccessService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/customer/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/customer/CustomerRowMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/customer/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/customer/UpdateCustomerDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/exception/DuplicateResourceException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/exception/RequestValidationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sreejith/exception/ResourceNotFound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Intial_Setup.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_Unique_Constraint_To_Customer.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sreejith/AbstractTestcontainers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sreejith/TestcontainersTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sreejith/customer/CustomerJdbcDataAccessServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sreejith/customer/CustomerJpaDataAccessServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sreejith/customer/CustomerRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sreejith/customer/CustomerServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sreejith/journey/CustomerIntegrationTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Record" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2R10btW5uCwuHaGR3UBHsN2cP6b" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/sreej/IdeaProjects/spring-boot-example/backend/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.runner",
+    "spring.configuration.checksum": "3ad51d13cc430751bef82c6d0811e314",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "PostgreSQL"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.sreejith.customer" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CustomerIntegrationTest.canUpdateCustomer">
+    <configuration name="CustomerIntegrationTest.canDeleteCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sreejith.journey.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sreejith.journey" />
+      <option name="MAIN_CLASS_NAME" value="com.sreejith.journey.CustomerIntegrationTest" />
+      <option name="METHOD_NAME" value="canDeleteCustomer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerIntegrationTest.canRegisterCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sreejith.journey.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sreejith.journey" />
+      <option name="MAIN_CLASS_NAME" value="com.sreejith.journey.CustomerIntegrationTest" />
+      <option name="METHOD_NAME" value="canRegisterCustomer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerIntegrationTest.canUpdateCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sreejith.journey.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sreejith.journey" />
+      <option name="MAIN_CLASS_NAME" value="com.sreejith.journey.CustomerIntegrationTest" />
+      <option name="METHOD_NAME" value="canUpdateCustomer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sreejith.customer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sreejith.customer" />
+      <option name="MAIN_CLASS_NAME" value="com.sreejith.customer.CustomerServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerServiceTest.willThrowUpdateCustomerWhenNoChanges" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sreejith.customer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sreejith.customer" />
+      <option name="MAIN_CLASS_NAME" value="com.sreejith.customer.CustomerServiceTest" />
+      <option name="METHOD_NAME" value="willThrowUpdateCustomerWhenNoChanges" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="spring-boot-example" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sreejith.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="spring-boot-example" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="sreejith.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CustomerIntegrationTest.canUpdateCustomer" />
+        <item itemvalue="JUnit.CustomerIntegrationTest.canDeleteCustomer" />
+        <item itemvalue="JUnit.CustomerIntegrationTest.canRegisterCustomer" />
+        <item itemvalue="JUnit.CustomerServiceTest" />
+        <item itemvalue="JUnit.CustomerServiceTest.willThrowUpdateCustomerWhenNoChanges" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9a8cb77-6556-460f-9ec4-527fc30696f9" name="Changes" comment="" />
+      <created>1686402355413</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686402355413</updated>
+      <workItem from="1686402874057" duration="15000" />
+      <workItem from="1686402896059" duration="2839000" />
+      <workItem from="1686420937878" duration="6576000" />
+      <workItem from="1686431945327" duration="46000" />
+      <workItem from="1686431999770" duration="2267000" />
+      <workItem from="1686477582720" duration="3540000" />
+      <workItem from="1686504240184" duration="4022000" />
+      <workItem from="1686569882622" duration="12994000" />
+      <workItem from="1686648357568" duration="15887000" />
+      <workItem from="1686681083003" duration="3661000" />
+      <workItem from="1686749800614" duration="6902000" />
+      <workItem from="1686828899759" duration="4881000" />
+      <workItem from="1687604229830" duration="13910000" />
+      <workItem from="1687889805550" duration="1360000" />
+      <workItem from="1688235532008" duration="332000" />
+      <workItem from="1688244300574" duration="595000" />
+      <workItem from="1688813096955" duration="14491000" />
+      <workItem from="1688839633929" duration="8291000" />
+      <workItem from="1688912216335" duration="2586000" />
+      <workItem from="1688915553764" duration="321000" />
+      <workItem from="1688915950640" duration="232000" />
+      <workItem from="1688916194263" duration="2279000" />
+      <workItem from="1688918666093" duration="3733000" />
+      <workItem from="1688924226146" duration="2427000" />
+      <workItem from="1689016718869" duration="3990000" />
+      <workItem from="1689099686914" duration="1223000" />
+      <workItem from="1689104697668" duration="1717000" />
+      <workItem from="1689417821603" duration="8834000" />
+      <workItem from="1689436623897" duration="78000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
