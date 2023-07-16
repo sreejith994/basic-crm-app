@@ -14,10 +14,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>amigoscode-api</name>
 	<description>Demo project for Spring Boot</description>
-	<organization>
-		<name>amigoscode</name>
-		<url>https://</url>
-	</organization>
+
 	<properties>
 		<java.version>17</java.version>
 		<docker.username>mastersreejith</docker.username>
@@ -215,15 +212,15 @@
 				<artifactId>jib-maven-plugin</artifactId>
 				<groupId>com.google.cloud.tools</groupId>
 				<version>3.3.1</version>
-				<executions>
-					<execution>
-						<id>build-docker-image</id>
-						<phase>package</phase>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
-				</executions>
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>build-docker-image</id>-->
+<!--						<phase>package</phase>-->
+<!--						<goals>-->
+<!--							<goal>build</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
 				<configuration>
 					<from>
 						<image>eclipse-temurin:17</image>
@@ -239,7 +236,7 @@
 						</platforms>
 					</from>
 					<to>
-						<image>docker.io/${docker.username}/${project.artifactId}:${project.version}</image>
+						<image>docker.io/${docker.username}/${docker.image.name}:${docker.image.tag}</image>
 						<tags>
 							<tag>latest</tag>
 						</tags>
