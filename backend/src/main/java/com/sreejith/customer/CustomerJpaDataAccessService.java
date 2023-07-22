@@ -26,7 +26,6 @@ public class CustomerJpaDataAccessService implements CustomerDao {
 
     }
 
-
     @Override
     public Boolean isExistingUser(String email) {
         return customerRepository.existsCustomerByEmail(email);

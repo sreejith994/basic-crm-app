@@ -33,7 +33,7 @@ public class CustomerIntegrationTest {
         String name = faker.name().name();
         String email = UUID.randomUUID() + faker.internet().safeEmailAddress();
         int age = faker.number().numberBetween(15, 99);
-        AddCustomerDto request = new AddCustomerDto(name, email, age);
+        AddCustomerDto request = new AddCustomerDto(name, email, age,"male");
 
         //send post request
         webTestClient.post().uri(CUSTOMER_URI).accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON).body(Mono.just(request), AddCustomerDto.class).exchange().expectStatus().isOk();
@@ -43,7 +43,7 @@ public class CustomerIntegrationTest {
         }).returnResult().getResponseBody();
 
         //make sure that customer is present
-        Customer expectedCustomer = new Customer(name, email, age);
+        Customer expectedCustomer = new Customer(name, email, age,"male");
 
         assertThat(allCustomers).usingRecursiveFieldByFieldElementComparatorIgnoringFields("id").contains(expectedCustomer);
 
@@ -63,7 +63,7 @@ public class CustomerIntegrationTest {
         String name = faker.name().name();
         String email = UUID.randomUUID() + faker.internet().safeEmailAddress();
         int age = faker.number().numberBetween(15, 99);
-        AddCustomerDto request = new AddCustomerDto(name, email, age);
+        AddCustomerDto request = new AddCustomerDto(name, email, age,"male");
 
         //send post request
         webTestClient.post().uri(CUSTOMER_URI).accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON).body(Mono.just(request), AddCustomerDto.class).exchange().expectStatus().isOk();
@@ -92,7 +92,7 @@ public class CustomerIntegrationTest {
         String name = faker.name().name();
         String email = UUID.randomUUID() + faker.internet().safeEmailAddress();
         int age = faker.number().numberBetween(15, 99);
-        AddCustomerDto request = new AddCustomerDto(name, email, age);
+        AddCustomerDto request = new AddCustomerDto(name, email, age,"male");
 
         //send post request
         webTestClient.post().uri(CUSTOMER_URI).accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON).body(Mono.just(request), AddCustomerDto.class).exchange().expectStatus().isOk();
@@ -106,7 +106,7 @@ public class CustomerIntegrationTest {
 
         //update customer
 
-        UpdateCustomerDto update = new UpdateCustomerDto(name, email, age + 1);
+        UpdateCustomerDto update = new UpdateCustomerDto(name, email, age + 1,"male");
         webTestClient.put().uri(CUSTOMER_URI + "/{id}", id).accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON).body(Mono.just(update), UpdateCustomerDto.class).exchange().expectStatus().isOk();
 
 

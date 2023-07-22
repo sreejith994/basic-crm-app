@@ -46,7 +46,7 @@ class CustomerServiceTest {
     void canGetCustomer() {
         //Given
         long id = 1;
-        Customer customer = new Customer("Alex", "Alex@gmailcom", 22);
+        Customer customer = new Customer("Alex", "Alex@gmailcom", 22,"male");
         when(customerDao.findCustomerByID(id)).thenReturn(Optional.of(customer));
         //when
         Customer actual = undertest.getCustomer((long) 1);
@@ -77,7 +77,7 @@ class CustomerServiceTest {
     @Test
     void addCustomer() {
         //Given
-        AddCustomerDto addCustomerDto = new AddCustomerDto("Alex", "Alex@gmailcom", 22);
+        AddCustomerDto addCustomerDto = new AddCustomerDto("Alex", "Alex@gmailcom", 22,"male");
         when(customerDao.isExistingUser(addCustomerDto.email())).thenReturn(false);
         doNothing().when(customerDao).insertCustomer(any(Customer.class));
         //when
@@ -92,7 +92,7 @@ class CustomerServiceTest {
     @Test
     void willThrownWhenaddCustomerHasExistingEmail() {
         //Given
-        AddCustomerDto addCustomerDto = new AddCustomerDto("Alex", "Alex@gmailcom", 22);
+        AddCustomerDto addCustomerDto = new AddCustomerDto("Alex", "Alex@gmailcom", 22,"male");
         when(customerDao.isExistingUser(addCustomerDto.email())).thenReturn(true);
         //when
         Throwable exception = assertThrows(DuplicateResourceException.class, () -> undertest.addCustomer(addCustomerDto));
@@ -110,7 +110,7 @@ class CustomerServiceTest {
     void deleteCustomer() {
         //Given
         long id = 1;
-        Customer customer = new Customer("Alex", "Alex@gmailcom", 27);
+        Customer customer = new Customer("Alex", "Alex@gmailcom", 27,"male");
         when(customerDao.findCustomerByID(id)).thenReturn(Optional.of(customer));
         doNothing().when(customerDao).deleteCustomer(id);
         //when
@@ -138,8 +138,8 @@ class CustomerServiceTest {
     @Test
     void updateCustomerWhenAgeChanged() {
         //Given
-        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alex", "Alex@gmailcom", 22);
-        Customer customer = new Customer("Alex", "Alex@gmailcom", 27);
+        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alex", "Alex@gmailcom", 22,"male");
+        Customer customer = new Customer("Alex", "Alex@gmailcom", 27,"male");
         long id = 1;
 
         when(customerDao.findCustomerByID(id)).thenReturn(Optional.of(customer));
@@ -156,8 +156,8 @@ class CustomerServiceTest {
     @Test
     void updateCustomerWhenNameChanged() {
         //Given
-        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alex", "Alex@gmailcom", 22);
-        Customer customer = new Customer("Alexander", "Alex@gmailcom", 22);
+        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alexander", "Alex@gmailcom", 22,"male");
+        Customer customer = new Customer("Alex", "Alex@gmailcom", 22,"male");
         long id = 1;
 
         when(customerDao.findCustomerByID(id)).thenReturn(Optional.of(customer));
@@ -174,8 +174,8 @@ class CustomerServiceTest {
     @Test
     void updateCustomerWhenEmailChanged() {
         //Given
-        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alex", "Alex@gmailcom", 22);
-        Customer customer = new Customer("Alex", "Alex22@gmailcom", 22);
+        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alex", "Alex@gmailcom", 22,"male");
+        Customer customer = new Customer("Alex", "Alex22@gmailcom", 22,"male");
         long id = 1;
 
         when(customerDao.findCustomerByID(id)).thenReturn(Optional.of(customer));
@@ -192,7 +192,7 @@ class CustomerServiceTest {
     @Test
     void willThrowUpdateCustomerWhenNotExistingCustomer() {
         //Given
-        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alex", "Alex@gmailcom", 22);
+        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alex", "Alex@gmailcom", 22,"male");
         long id = 1;
 
         when(customerDao.findCustomerByID(id)).thenReturn(Optional.empty());
@@ -212,8 +212,8 @@ class CustomerServiceTest {
     @Test
     void willThrowUpdateCustomerWhenEmailInuse() {
         //Given
-        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alex", "Alex@gmailcom", 22);
-        Customer customer = new Customer("Alex", "Alex22@gmailcom", 27);
+        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alex", "Alex@gmailcom", 22,"male");
+        Customer customer = new Customer("Alex", "Alex22@gmailcom", 27,"male");
         long id = 1;
 
         when(customerDao.findCustomerByID(id)).thenReturn(Optional.of(customer));
@@ -236,8 +236,8 @@ class CustomerServiceTest {
     @Test
     void willThrowUpdateCustomerWhenNoChanges() {
         //Given
-        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alex", "Alex@gmailcom", 22);
-        Customer customer = new Customer("Alex", "Alex@gmailcom", 22);
+        UpdateCustomerDto updateCustomerDto = new UpdateCustomerDto("Alex", "Alex@gmailcom", 22,"male");
+        Customer customer = new Customer("Alex", "Alex@gmailcom", 22,"male");
         long id = 1;
         when(customerDao.findCustomerByID(id)).thenReturn(Optional.of(customer));
 

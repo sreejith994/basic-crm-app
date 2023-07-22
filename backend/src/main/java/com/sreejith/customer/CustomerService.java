@@ -32,7 +32,9 @@ public class CustomerService {
         }
         customerDao.insertCustomer(new Customer(addCustomerDto.name(),
                 addCustomerDto.email(),
-                addCustomerDto.age()));
+                addCustomerDto.age(),
+                addCustomerDto.gender())
+                );
     }
 
     void deleteCustomer(Long id) {
@@ -61,9 +63,8 @@ public class CustomerService {
             }
             customer.setEmail(updateCustomerDto.email());
             changes = true;
-
-
         }
+
         if(!changes) {
             throw new RequestValidationException("No Changes Found");
         }

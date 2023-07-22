@@ -45,4 +45,8 @@ public class Customer {
     @NonNull
     private Integer age;
 
+    @Column(nullable = false)
+    @NonNull
+    private String gender;
+
 }

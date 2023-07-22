@@ -30,7 +30,9 @@ public class Main {
             Random rand = new Random();
             Customer customer = new Customer(name.fullName(),
                     faker.internet().safeEmailAddress(),
-                    rand.nextInt(16,99));
+                    rand.nextInt(16,99),
+                    rand.nextInt(1,10) >= 5 ? "male" : "female"
+            );
 
             customerRepository.save(customer);
 
